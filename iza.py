@@ -1,35 +1,37 @@
 def consultar(pets):
+
+    print("\n========== CONSULTAR PETS ==========")
+
     if len(pets) == 0:
-        print("\nNenhum pet cadastrado!")
+        print("Nenhum pet cadastrado!")
         return
 
-    print("\n===== CONSULTAR PETS =====")
-    print("1 - Ver todos os pets")
-    print("2 - Buscar pet pelo nome")
+    print("1 - Consultar todos")
+    print("2 - Buscar pelo nome")
 
     opcao = input("Escolha uma opção: ")
 
     if opcao == "1":
-        print("\n===== LISTA DE PETS =====")
+
+        print("\n========== PETS CADASTRADOS ==========")
 
         for pet in pets:
-            print("-------------------------")
-            print(f"Nome: {pet.nome}")
-            print(f"Idade: {pet.idade}")
-            print(f"Raça: {pet.raca}")
-            print(f"Espécie: {pet.especie}")
+            pet.exibir_dados()
 
     elif opcao == "2":
-        nome_busca = input("Digite o nome do pet: ").lower()
+
+        nome_busca = input("Digite o nome do pet: ")
+
         encontrado = False
 
         for pet in pets:
-            if pet.nome.lower() == nome_busca:
-                print("\n===== PET ENCONTRADO =====")
-                print(f"Nome: {pet.nome}")
-                print(f"Idade: {pet.idade}")
-                print(f"Raça: {pet.raca}")
-                print(f"Espécie: {pet.especie}")
+
+            if pet.nome.lower() == nome_busca.lower():
+
+                print("\n========== PET ENCONTRADO ==========")
+
+                pet.exibir_dados()
+
                 encontrado = True
                 break
 
@@ -37,4 +39,4 @@ def consultar(pets):
             print("\nPet não encontrado!")
 
     else:
-        print("\nOpção inválida!")
+        print("Opção inválida!")
