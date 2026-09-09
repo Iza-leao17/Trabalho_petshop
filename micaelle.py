@@ -22,11 +22,13 @@ def alterar(pets):
     print("\nDigite os novos dados.")
     print("Se não quiser alterar algum dado, pressione ENTER.")
 
+    # Alterar nome
     novo_nome = input(f"Novo nome ({pet_encontrado.nome}): ")
 
     if novo_nome != "":
         pet_encontrado.nome = novo_nome
 
+    # Alterar idade
     nova_idade = input(f"Nova idade ({pet_encontrado.idade}): ")
 
     if nova_idade != "":
@@ -41,11 +43,13 @@ def alterar(pets):
         except ValueError:
             print("Idade inválida. A idade anterior foi mantida.")
 
+    # Alterar raça
     nova_raca = input(f"Nova raça ({pet_encontrado.raca}): ")
 
     if nova_raca != "":
         pet_encontrado.raca = nova_raca
 
+    # Alterar dono
     novo_dono = input(f"Novo dono ({pet_encontrado.dono}): ")
 
     if novo_dono != "":
