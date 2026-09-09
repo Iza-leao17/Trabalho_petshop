@@ -3,7 +3,7 @@ def consultar(pets):
     print("\n========== CONSULTAR PETS ==========")
 
     if len(pets) == 0:
-        print("Nenhum pet cadastrado!")
+        print("Nenhum pet cadastrado!")                                                                                                                                                                                                                                       
         return
 
     print("1 - Consultar todos")
