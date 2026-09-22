@@ -17,9 +17,6 @@ class Pet:
         self.__nome = novo_nome
 
 
-    def fazer_som(self):
-        return "Som de animal"
-
 
     def exibir_dados(self):
         print("-----------------------------")
@@ -35,7 +32,6 @@ class Cachorro(Pet):
 
     def fazer_som(self):
         return "Au au!"
-
 
 
 
